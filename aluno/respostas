@@ -1,0 +1,128 @@
+function maiorEntreTres(numero1, numero2, numero3) {
+  if (
+    typeof numero1 !== 'number' ||
+    typeof numero2 !== 'number' ||
+    typeof numero3 !== 'number' ||
+    Number.isNaN(numero1) ||
+    Number.isNaN(numero2) ||
+    Number.isNaN(numero3)
+  ) {
+    console.log('Informe apenas números válidos.');
+    return null;
+  }
+
+  return Math.max(numero1, numero2, numero3);
+}
+
+function concatenar3(palavra1, palavra2, palavra3, separador = ' | ') {
+  return `${palavra1}${separador}${palavra2}${separador}${palavra3}`;
+}
+
+function converterMinutosEmHoras(minutos) {
+  if (typeof minutos !== 'number' || Number.isNaN(minutos)) {
+    console.log('Informe um número válido de minutos.');
+    return null;
+  }
+
+  return minutos / 60;
+}
+
+function retornarQuantidadeDeGasolina(kmDestino, consumoMedioLitrosPor100Km) {
+  if (
+    typeof kmDestino !== 'number' ||
+    typeof consumoMedioLitrosPor100Km !== 'number' ||
+    Number.isNaN(kmDestino) ||
+    Number.isNaN(consumoMedioLitrosPor100Km)
+  ) {
+    console.log('Informe valores numéricos válidos.');
+    return null;
+  }
+
+  const distanciaTotal = kmDestino * 2;
+  return (distanciaTotal * consumoMedioLitrosPor100Km) / 100;
+}
+
+function exibirProdutoComPreco(nomeProduto, precoProduto) {
+  if (typeof nomeProduto !== 'string' || typeof precoProduto !== 'number') {
+    console.log('Informe o nome do produto em texto e o preço em número.');
+    return;
+  }
+
+  const precoFormatado = precoProduto.toFixed(2).replace('.', ',');
+  const pontos = '.'.repeat(Math.max(0, 30 - nomeProduto.length));
+  console.log(`${nomeProduto} ${pontos} R$ ${precoFormatado}`);
+}
+
+function precoDaParcela(precoTotal, parcelas = 1) {
+  if (typeof precoTotal !== 'number' || typeof parcelas !== 'number') {
+    console.log('Informe valores numéricos válidos.');
+    return null;
+  }
+
+  if (parcelas > 12) {
+    return precoTotal;
+  }
+
+  return precoTotal / parcelas;
+}
+
+function aplicarDesconto(valorTotal, desconto) {
+  if (typeof valorTotal !== 'number' || typeof desconto !== 'number') {
+    console.log('Informe valores numéricos válidos.');
+    return null;
+  }
+
+  if (desconto > valorTotal) {
+    return 0;
+  }
+
+  return valorTotal - desconto;
+}
+
+function aplicarCupomDesconto(valorTotal, cupom) {
+  if (typeof valorTotal !== 'number' || typeof cupom !== 'string') {
+    console.log('Informe o valor total em número e o cupom em texto.');
+    return null;
+  }
+
+  switch (cupom) {
+    case 'CUPOM50':
+      return aplicarDesconto(valorTotal, 50);
+    case 'CUPOM100':
+      return aplicarDesconto(valorTotal, 100);
+    case 'CUPOM200':
+      return aplicarDesconto(valorTotal, 200);
+    default:
+      return valorTotal;
+  }
+}
+
+console.log('1) Maior entre três números:');
+console.log(maiorEntreTres(8, 14, 10));
+                                                                                                                                               
+console.log('\n2) Concatenar 3 palavras:');
+console.log(concatenar3('JavaScript', 'HTML', 'CSS'));
+console.log(concatenar3('A', 'B', 'C', ' / '));
+
+console.log('\n3) Minutos em horas:');
+console.log(converterMinutosEmHoras(180));
+
+console.log('\n4) Gasolina para ida e volta:');
+console.log(retornarQuantidadeDeGasolina(200, 12));
+
+console.log('\n5.1) Exibir produto com preço:');
+exibirProdutoComPreco('Jaqueta Jeans', 220);
+
+console.log('\n5.2) Preço da parcela:');
+console.log(precoDaParcela(240, 4));
+console.log(precoDaParcela(240, 15));
+
+console.log('\n5.3) Aplicar desconto:');
+console.log(aplicarDesconto(200, 50));
+console.log(aplicarDesconto(200, 250));
+
+console.log('\n5.4) Aplicar cupom de desconto:');
+console.log(aplicarCupomDesconto(200, 'CUPOM50'));
+console.log(aplicarCupomDesconto(200, 'CUPOM100'));
+console.log(aplicarCupomDesconto(200, 'CUPOM200'));
+console.log(aplicarCupomDesconto(200, 'CUPOM999'));
