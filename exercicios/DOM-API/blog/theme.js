@@ -5,7 +5,7 @@
  * 4. Implemente uma função que insira um emoji, passado via parâmetro, antes de todos os primeiros parágrafos dos artigos
  * 5. Implemente uma função que insira um aviso, no topo da listagem de artigos:
  * 
- *		<div class="alert">
- *			<p>⚠️ Atenção: os textos abaixos são excertos gerados com IA apenas porque são exemplos de preenchimento para uma atividade de programção. Leia, escreva, estude: não terceirize sua humanidade para uma máquina espertinha de autocompletar.</p>
- * 		</div> 
+ *	<div class="alert">
+ *		<p>⚠️ Atenção: os textos abaixos são excertos gerados com IA apenas porque são exemplos de preenchimento para uma atividade de programção. Leia, escreva, estude: não terceirize sua humanidade para uma máquina espertinha de autocompletar.</p>
+ *	</div> 
  */
