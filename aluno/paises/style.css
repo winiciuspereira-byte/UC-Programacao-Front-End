@@ -1,0 +1,64 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+	color: #222;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+nav a {
+	margin-right: 12px;
+	font-size: 14px;
+}
+
+.countries {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.countries div {
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 10px 16px;
+}
+
+.countries div h3 {
+	margin: 0;
+	font-size: 14px;
+}
+
+.countries article {
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 12px;
+	width: 220px;
+}
+
+.countries article h3 {
+	margin: 8px 0 4px;
+	font-size: 16px;
+}
+
+.countries article img {
+	display: block;
+	border: 1px solid #eee;
+}
+
+.countries article dl {
+	margin: 0;
+	font-size: 13px;
+}
+
+.countries article dt {
+	font-weight: bold;
+	color: #555;
+}
+
+.countries article dd {
+	margin: 0 0 6px;
+}
