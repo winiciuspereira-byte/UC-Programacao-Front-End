@@ -24,3 +24,11 @@ Agora iremos utilizar um array de países com objetos com mais detalhes, a parti
 
 Além disso, utilize a FlagCDN para exibir a bandeira dos países: [https://flagcdn.com/](https://flagcdn.com/)
 
+## 4. Filtro de continentes
+
+Adicione um array no topo do seu script com os valores `["América", "África"]`. Exiba apenas os países destes continentes.
+Conseguindo, altere os continentes na lista para validar que está funcionando adequadamente.
+
+## 5. Filtro de moeda
+
+Filtro a exibição de países para exibir apenas os países cujo a moeda seja o `Dólar dos Estados Unidos`.
