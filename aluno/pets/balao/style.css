@@ -1,0 +1,14 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f2f5;
+}
+
+#balao {
+	margin: 0;
+	line-height: 1;
+	user-select: none;
+}
