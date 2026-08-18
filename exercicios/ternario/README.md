@@ -34,10 +34,6 @@ if (quantidade === 1) {
 const mensagem = `Você tem ${quantidade} ${palavra} no carrinho.`;
 ```
 
-3. 
-
-
-
 ---
 
 - Utilize a função `prompt()` para capturar dados do usuário
